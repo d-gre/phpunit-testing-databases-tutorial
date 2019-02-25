@@ -2,7 +2,7 @@
   "name": "PHPunit database tests",
   "description": "tutorial for unit testing with non-persistent SQLite databases",
   "license": "MIT",
-  "homepage": "https://github.com",
+  "homepage": "https://github.com/d-gre/phpunit-testing-databases-tutorial",
   "authors": [
     {
       "name": "d.gre",
