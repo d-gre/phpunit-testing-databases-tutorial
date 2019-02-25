@@ -19,7 +19,11 @@ SQLite database in `:memory:`
   * DBUnit (abandoned but still working well for this)
 
 ## Installation
-Clone this repository, go to its root directory and run 
+Clone this repository:
+
+`git clone git@github.com:d-gre/phpunit-testing-databases-tutorial.git`
+
+go to its root directory and run 
 
 `composer install`
 
