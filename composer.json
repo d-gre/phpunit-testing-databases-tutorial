@@ -1,0 +1,29 @@
+{
+  "name": "PHPunit database tests",
+  "description": "tutorial for unit testing with non-persistent SQLite databases",
+  "license": "MIT",
+  "homepage": "https://github.com",
+  "authors": [
+    {
+      "name": "d.gre",
+      "homepage": "https://www.d-gre.net/"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "monolog/monolog": "^1.17"
+  },
+  "scripts": {
+    "start": "php -S localhost:8080 -t public",
+    "test": "phpunit"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0",
+    "phpunit/dbunit": "^4.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  }
+}
