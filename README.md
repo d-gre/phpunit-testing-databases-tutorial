@@ -1,4 +1,4 @@
-# Tutorial for Testing Non-Persistent Databases in PHPUnit/DBunit
+# Tutorial for Testing Non-Persistent Databases in PHPUnit/DBUnit
 
 I've spent quite some time to get this to work, because the official documentation of PHPUnit is unfortunately a little 
 bit sketchy, especially for beginners in unit testing databases. (But you should definitely 
