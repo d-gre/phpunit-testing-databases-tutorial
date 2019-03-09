@@ -4,12 +4,11 @@ use PHPUnit\DbUnit\TestCaseTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class GuestBookTest
+ * Class GuestbookTest
  */
-class GuestBookTest extends TestCase {
+class GuestbookTest extends TestCase {
 
 	use TestCaseTrait;
-
 
 	/**
 	 * the database object
