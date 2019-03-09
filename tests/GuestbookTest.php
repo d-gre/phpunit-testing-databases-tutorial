@@ -8,7 +8,10 @@ use PHPUnit\Framework\TestCase;
  */
 class GuestbookTest extends TestCase {
 
-	use TestCaseTrait;
+	use TestCaseTrait {
+		// XXX this line is important (I'll tell why below):
+		setUp as public testCaseTraitSetUp;
+	}
 
 	/**
 	 * the database object
@@ -27,6 +30,29 @@ class GuestbookTest extends TestCase {
 	 * @var null
 	 */
 	private $conn = NULL;
+
+
+	/**
+	 * This setUp-function is for showing a possible problem.
+	 * Let's say you would need a custom setUp function for your test,
+	 * you would insert this:
+	 */
+	protected function setUp() {
+
+		// Remember the 'setUp as protected testCaseTraitSetUp;' from above?
+		// Very important, because we have to call the setUp method of the
+		// TestCaseTrait to get this to work. 'parent::setUp();' would not
+		// work, because it would call the setUp function of the TestCase
+		// instead.
+		// So call the method we've just mapped:
+		$this->testCaseTraitSetUp();
+
+		// this is a dummy test to avoid a warning message
+		$this->assertTrue( TRUE );
+
+		// Now you could add other stuff you might need here
+		// ...
+	}
 
 
 	/**
