@@ -27,6 +27,7 @@ class GuestbookTest extends TestCase {
 	/**
 	 * the database connection
 	 * only instantiate PHPUnit\DbUnit\Database\Connection once per test
+	 *
 	 * @var null
 	 */
 	private $conn = NULL;
@@ -140,7 +141,7 @@ class GuestbookTest extends TestCase {
 		// insert a new guest, but omit the value for 'phone' to let the test fail
 		$guestbook->addGuest( 'Daniel', 'St Kilda, Scotland', '' );
 
-		// get the resulting table from our database, , changed by the Guestbook Class
+		// get the resulting table from our database, changed by the Guestbook Class
 		$queryTable = $this->getConnection()->createQueryTable(
 			'guestbook', 'SELECT id, name, address, phone FROM guestbook'
 		);
