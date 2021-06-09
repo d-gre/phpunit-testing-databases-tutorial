@@ -40,7 +40,7 @@ class GuestbookTest extends TestCase {
 	 */
 	protected function setUp() {
 
-		// Remember the 'setUp as protected testCaseTraitSetUp;' from above?
+		// Remember the 'setUp as public testCaseTraitSetUp;' from above?
 		// Very important, because we have to call the setUp method of the
 		// TestCaseTrait to get this to work. 'parent::setUp();' would not
 		// work, because it would call the setUp function of the TestCase
